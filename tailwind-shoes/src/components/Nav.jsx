@@ -47,8 +47,8 @@ export function Nav() {
         </ul>
       </div>
       {/* //Cart button */}
-      <div className="fixed left-4 bottom-4 lg:static lg:mr-8">
-        <div className="flex-center h-12 w-12 rounded-full bg-white shadow-md cursor-pointer ">
+      <div className="btn-press-anim fixed bottom-4 left-4 lg:static lg:mr-8">
+        <div className="flex-center h-12 w-12 cursor-pointer rounded-full bg-white shadow-md">
           <TbShoppingBag />
         </div>
       </div>

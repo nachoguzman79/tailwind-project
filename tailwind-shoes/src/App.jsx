@@ -3,8 +3,8 @@ import { ShowDetail } from "./components/ShoeDetail";
 
 export function App() {
   return (
-    // global padding p-10
-    <div className="p-10 xl:px-24"> 
+    
+    <div className="animate-fadeIn p-10 xl:px-24"> 
     
       <Nav />
       <ShowDetail />
@@ -12,3 +12,5 @@ export function App() {
     </div>
   );
 }
+// el animate-fadeIn creado hace que toda la pagina cargue smooth
+// da un feeling of smoothness
