@@ -8,19 +8,24 @@ const ROUTES = ["Home", "About", "Services", "Pricing", "Contact"];
 export function Nav() {
   const [isMobileMenuShown, setIsMobileMenuShown] = useState(false);
   return (
-    <nav className="flex flex-wrap items-center justify-between ">
+    <nav className="z-10 relative flex flex-wrap items-center justify-between ">
       {/* logo */}
       <a href="#">
         <NikeLogo className="h-20 w-20" />
       </a>
       {/* burger button */}
-      <button onClick= {()=> setIsMobileMenuShown(!isMobileMenuShown)}className="lg:hidden hover:bg-gray-100 p-2 focus:ring-2 focus:ring-gray-200 rounded-lg">
+      <button
+        onClick={() => setIsMobileMenuShown(!isMobileMenuShown)}
+        className="lg:hidden hover:bg-gray-100 p-2 focus:ring-2 focus:ring-gray-200 rounded-lg"
+      >
         <RxHamburgerMenu size={25} />
       </button>
 
       {/* Menu list Hidden hace que desaparezca el menu em mobile version*/}
 
-      <div className={`${ !isMobileMenuShown && "hidden"}  w-full lg:w-auto lg:block`}>
+      <div
+        className={`${!isMobileMenuShown && "hidden"}  w-full lg:w-auto lg:block`}
+      >
         <ul
           className=" lg:space-x-8 flex flex-col lg:flex-row lh bg-gray-100 lg:border-none lg:bg-transparent
         text-lg border border-gray-100 rounded-lg p-4"
@@ -28,10 +33,11 @@ export function Nav() {
           {ROUTES.map((route, i) => {
             return (
               <li
-                className={`px-3 py-2 cursor-pointer rounded ${
-                  i === 0 ? "bg-blue-500 text-white lg:text-blue-500 lg:bg-transparent" 
-                  : "hover:bg-gray-200"
-                }`}
+                className={`lg:hover:text-blue-500 lg:bg-transparent px-3 py-2 cursor-pointer rounded ${
+                  i === 0
+                    ? "bg-blue-500 text-white lg:text-blue-500 lg:bg-transparent"
+                    : "hover:bg-gray-200"
+                } ${(i === 3 || i === 4) && "lg:text-white"}`}
                 key={route}
               >
                 {route}
@@ -41,8 +47,8 @@ export function Nav() {
         </ul>
       </div>
       {/* //Cart button */}
-      <div className="fixed left-4 bottom-4 lg:static">
-        <div className="flex-center h-12 w-12 rounded-full bg-white shadow-md cursor-pointer">
+      <div className="fixed left-4 bottom-4 lg:static lg:mr-8">
+        <div className="flex-center h-12 w-12 rounded-full bg-white shadow-md cursor-pointer ">
           <TbShoppingBag />
         </div>
       </div>
