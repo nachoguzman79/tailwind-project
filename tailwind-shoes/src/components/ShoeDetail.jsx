@@ -2,7 +2,7 @@ import nike1 from "../assets/n1-min.png";
 import { QTY, SIZES } from "../constant";
 import { Select } from "./Select";
 
-export function ShowDetail() {
+export function ShoeDetail() {
   return (
     <div className="flex flex-col lg:flex-row-reverse space-y-4">
       {/* Shoe Image */}
