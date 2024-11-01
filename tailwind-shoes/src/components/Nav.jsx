@@ -11,12 +11,12 @@ export function Nav({onClickShoppingBtn}) {
     <nav className="z-10 relative flex flex-wrap items-center justify-between ">
       {/* logo */}
       <a href="#">
-        <NikeLogo className="h-20 w-20" />
+        <NikeLogo className="h-20 w-20 dark:fill-white" />
       </a>
-      {/* burger button */}
+      {/* Burger button */}
       <button
         onClick={() => setIsMobileMenuShown(!isMobileMenuShown)}
-        className="lg:hidden hover:bg-gray-100 p-2 focus:ring-2 focus:ring-gray-200 rounded-lg"
+        className="dark:text-gray-400 dark:hover:bg-gray-700 lg:hidden hover:bg-gray-100 p-2 focus:ring-2 focus:ring-gray-200 rounded-lg"
       >
         <RxHamburgerMenu size={25} />
       </button>
@@ -33,7 +33,7 @@ export function Nav({onClickShoppingBtn}) {
           {ROUTES.map((route, i) => {
             return (
               <li
-                className={`lg:hover:text-blue-500 lg:bg-transparent px-3 py-2 cursor-pointer rounded ${
+                className={`lg:hover:text-blue-500 lg:bg-transparent px-3 py-2 cursor-pointer rounded lg:dark:text-white ${
                   i === 0
                     ? "bg-blue-500 text-white lg:text-blue-500 lg:bg-transparent"
                     : "hover:bg-gray-200"
